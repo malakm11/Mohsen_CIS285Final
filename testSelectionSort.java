@@ -25,14 +25,25 @@ public class testSelectionSort {
 
     @Test
     public void testNegative() {
-      
+        int[] arr = { -8, -9, -7, -10, -2 };
+        int[] sortedArr = { -10, -9, -8, -7, -2 };
+        sort.selectionSort(arr);
+        assertArrayEquals(sortedArr, arr);
+    }
 
     @Test
     public void testMixed() {
-       
+        int[] arr = { -8, 9, 0, -10, 2 };
+        int[] sortedArr = { -10, -8, 0, 2, 9 };
+        sort.selectionSort(arr);
+        assertArrayEquals(sortedArr, arr);
+    }
 
     @Test
     public void testDuplicates() {
-       
+        int[] arr = { 5, 2, 8, 2, 1 };
+        int[] sortedArr = { 1, 2, 2, 5, 8 };
+        sort.selectionSort(arr);
+        assertArrayEquals(sortedArr, arr);
     }
 }
